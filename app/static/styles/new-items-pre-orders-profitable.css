@@ -1,0 +1,72 @@
+.new-items-pre-orders-profitable {
+    width: 100%;
+    text-align: center;
+}
+
+.npp-profitable {
+    width: 11em;
+}
+
+.npp-nav-bar {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #141111;
+    margin-bottom: 20px;
+}
+.npp-nav-item {
+    font-size: 24px;
+    font-weight: 600;
+    padding-right: 10px;
+    transition: color 0.2s ease;
+}
+
+.npp-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.npp-navbar-card {
+    background-color: #534e4e;
+    border-radius: 10px;
+    width: 200px; /* Уменьшена ширина карточки */
+    margin: 10px;
+    margin-top: 0;
+    /* padding: 10px; */
+    padding-top: 0;
+    text-align: center;
+}
+.npp-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.npp-card-title {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.npp-card-price {
+    font-size: 18px;
+    color: #fbbb43;
+}
+.npp-card-discount {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.npp-nav-item:hover {
+    color: #fbbb43;
+}
+
+@media (max-width: 600px) {
+    .npp-navbar-card {
+        width: 50%; /* Уменьшена ширина карточки */
+    }
+}
+
+@media (max-width: 1400px) {
+    .npp-nav-bar {
+        flex-wrap: wrap;
+    }
+}
+

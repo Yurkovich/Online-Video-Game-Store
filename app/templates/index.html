@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Yurkovich Store</title>
+        <link rel="stylesheet" href="static/styles/navbar.css" />
+        <link rel="stylesheet" href="static/styles/auth-window.css" />
+        <link rel="stylesheet" href="static/styles/style-main-container.css" />
+        <link rel="stylesheet" href="static/styles/style-card.css" />
+        <link
+            rel="stylesheet"
+            href="static/styles/new-items-pre-orders-profitable.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Ubuntu", sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="nav-item">
+                    <img
+                        src="static/files/icons8-steam-circled-64.png"
+                        alt=""
+                    />
+                </div>
+
+                <a href="*">
+                    <div class="nav-item navbar-button">Каталог игр</div>
+                </a>
+
+                <div class="nav-item">
+                    <input type="search" />
+                </div>
+
+                <a href="*" id="loginButton">
+                    <div class="nav-item navbar-button">Войти</div>
+                </a>
+
+                <div class="nav-item">
+                    <a href="*">
+                        <img src="static/files/icons8-сердце-96.png" alt="" />
+                    </a>
+                </div>
+
+                <div class="nav-item">
+                    <a href="*">
+                        <img src="static/files/cart-icon-16.png" alt="" />
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div id="overlay"></div>
+
+            <div id="loginModal">
+                <h2>Авторизация</h2>
+                <form id="loginForm">
+                    <input type="email" id="email" placeholder="Email" />
+                    <input type="password" id="password" placeholder="Пароль" />
+                    <button class="auth-button" type="submit">Войти</button>
+                </form>
+                <div class="additional-options">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Зарегистрироваться</a>
+                </div>
+                <a href="#" id="closeModal">&times;</a>
+            </div>
+
+            <div class="main-container">
+                <div class="game-list-popular">
+                    <h2>Популярное</h2>
+                    <div class="game-item">
+                        <div>
+                            <img
+                                class="card-img"
+                                src="static/images/dota2-card.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="card-game-title">
+                            <h3>Defense of the Ancients 2</h3>
+                            <h4>MOBA</h4>
+                        </div>
+                        <div class="card-price-discount">
+                            <p class="popular-card-price">329 ₽</p>
+                            <p class="popular-card-discount">89%</p>
+                        </div>
+                    </div>
+                    <div class="game-item">
+                        <div>
+                            <img
+                                class="card-img"
+                                src="static/images/CS2-card.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="card-game-title">
+                            <h3>Counter-Strike 2</h3>
+                            <h4>Shooter</h4>
+                        </div>
+                        <div class="card-price-discount">
+                            <p class="popular-card-price">789 ₽</p>
+                            <p class="popular-card-discount">20%</p>
+                        </div>
+                    </div>
+                    <div class="game-item">
+                        <div>
+                            <img
+                                class="card-img"
+                                src="static/images/gta5-card.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="card-game-title">
+                            <h3>Grand Theft Auto V</h3>
+                            <h4>Action-Adventure</h4>
+                        </div>
+                        <div class="card-price-discount">
+                            <p class="popular-card-price">999 ₽</p>
+                            <p class="popular-card-discount">33%</p>
+                        </div>
+                    </div>
+                    <div class="game-item">
+                        <div>
+                            <img
+                                class="card-img"
+                                src="static/images/borderlands-card.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="card-game-title">
+                            <h3>Borderlands: Game of the Year</h3>
+                            <h4>Shooter, Action/RPG</h4>
+                        </div>
+                        <div class="card-price-discount">
+                            <p class="popular-card-price">2299 ₽</p>
+                            <p class="popular-card-discount">33%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-items-pre-orders-profitable">
+                    <div class="npp-nav-bar">
+                        <div class="npp-nav-item">Новинки</div>
+                        <div class="npp-nav-item">Предзаказы</div>
+                        <div class="npp-nav-item">Максимальная выгода</div>
+                    </div>
+                    <div class="npp-content">
+                        <div class="npp-navbar-card">
+                            <img
+                                src="https://via.placeholder.com/200"
+                                alt="DOTA 2"
+                            />
+                            <div class="npp-card-title">DOTA 2</div>
+                            <div class="npp-card-price">329 ₽</div>
+                            <div class="npp-card-discount">3000 ₽</div>
+                        </div>
+                        <div class="npp-navbar-card">
+                            <img
+                                src="https://via.placeholder.com/200"
+                                alt="GTA V"
+                            />
+                            <div class="npp-card-title">GTA V</div>
+                            <div class="npp-card-price">999 ₽</div>
+                            <div class="npp-card-discount">1500 ₽</div>
+                        </div>
+                        <div class="npp-navbar-card">
+                            <img
+                                src="https://via.placeholder.com/200"
+                                alt="Counter-Strike 2"
+                            />
+                            <div class="npp-card-title">Counter-Strike 2</div>
+                            <div class="npp-card-price">789 ₽</div>
+                            <div class="npp-card-discount">1000 ₽</div>
+                        </div>
+                        <div class="npp-navbar-card">
+                            <img
+                                src="https://via.placeholder.com/200"
+                                alt="Counter-Strike 2"
+                            />
+                            <div class="npp-card-title">Counter-Strike 2</div>
+                            <div class="npp-card-price">789 ₽</div>
+                            <div class="npp-card-discount">1000 ₽</div>
+                        </div>
+                        <div class="npp-navbar-card">
+                            <img
+                                src="https://via.placeholder.com/200"
+                                alt="Counter-Strike 2"
+                            />
+                            <div class="npp-card-title">Counter-Strike 2</div>
+                            <div class="npp-card-price">789 ₽</div>
+                            <div class="npp-card-discount">1000 ₽</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer></footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const loginButton = document.getElementById("loginButton");
+                const overlay = document.getElementById("overlay");
+                const loginModal = document.getElementById("loginModal");
+                const closeModal = document.getElementById("closeModal");
+
+                loginButton.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    overlay.style.display = "block";
+                    loginModal.style.display = "block";
+                });
+
+                overlay.addEventListener("click", function () {
+                    overlay.style.display = "none";
+                    loginModal.style.display = "none";
+                });
+
+                closeModal.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    overlay.style.display = "none";
+                    loginModal.style.display = "none";
+                });
+
+                loginModal.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                });
+            });
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const loginForm = document.getElementById("loginForm");
+
+                loginForm.addEventListener("submit", function (event) {
+                    event.preventDefault();
+                    const formData = {
+                        email: document.getElementById("email").value,
+                        password: document.getElementById("password").value,
+                    };
+
+                    fetch("http://127.0.0.1:8000/yurkovichstore/auth", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(formData),
+                    })
+                        .then((response) => response.json())
+                        .then((data) => console.log("Успешный ответ:", data))
+                        .catch((error) =>
+                            console.error(
+                                "Ошибка при выполнении запроса:",
+                                error
+                            )
+                        );
+                });
+            });
+        </script>
+    </body>
+</html>

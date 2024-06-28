@@ -1,0 +1,73 @@
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 5fr 1fr 0.5fr 0.5fr;
+    grid-template-rows: 4em;
+    align-items: center;
+    color: white;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-item {
+    text-align: center;
+    gap: 1em;
+    font-size: larger;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+}
+
+.nav-item img {
+    max-width: 3em;
+}
+
+.navbar input {
+    width: 90%;
+    height: 44px;
+    min-width: 20em;
+
+    border-radius: 40px;
+    border: none;
+
+    background-color: rgb(114, 112, 112);
+    outline: none;
+    color: rgb(0, 0, 0);
+}
+
+input[type="search"] {
+    font-size: 1em;
+    padding-left: 1.5em;
+}
+
+.navbar input:focus {
+    background-color: white;
+    border: 3px solid #fbbb43;
+}
+
+.navbar-button {
+    display: flex;
+    border: 3px solid white;
+    border-radius: 2em;
+
+    justify-content: center;
+    align-items: center;
+    min-width: 8em;
+    max-width: 10em;
+    height: 2em;
+
+
+    transition: color 0.25s ease;
+}
+
+.nav-item a {
+    text-decoration: none;
+    
+}
+
+.navbar-button:hover {
+    border: 3px solid #fbbb43;
+    color: #fbbb43;
+}

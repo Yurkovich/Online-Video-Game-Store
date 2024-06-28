@@ -1,0 +1,69 @@
+.game-list-popular {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+}
+
+.game-item {
+    display: flex;
+    background-color: #141111;
+    width: 500px;
+    margin-top: 1em;
+    border: solid 2px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-game-title {
+    display: flex;
+    flex-direction: column;
+    max-height: 90px;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.card-game-title h3 {
+    font-weight: 100;
+    margin-left: 10px;
+    margin-top: 5px
+}
+
+.card-game-title h4 {
+    font-weight: 100;
+    color: #fbbb43;
+    margin-left: 10px;
+    margin-top: 5px
+}
+
+.card-img {
+    max-height: 94px;
+    max-width: 100px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-price-discount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 1em;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.popular-card-discount {
+    display: flex;
+    background-color: #fbbb43;
+    color: black;
+    border-radius: 15px;
+    width: 3em;
+    justify-content: center;
+}
+
+.popular-card-price {
+    font-size: 25px;
+    width: 3.5em;
+}

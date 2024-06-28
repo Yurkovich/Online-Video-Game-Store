@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #141111;
+    color: white;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    margin-top: 2em;
+    margin-left: 5em;
+    margin-right: 5em;
+    gap: 5em;
+}
+
+/* @media (max-width: 900px) {
+    .main-container {
+        grid-template-rows: repeat(3);
+    }
+
+    .container {
+        grid-column: 1/13;
+        grid-row: 2/3;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        grid-template-rows: repeat(3);
+    }
+
+    .card {
+        margin-inline: 0;
+    }
+} */

@@ -1,0 +1,87 @@
+#loginButton {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #14111170;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+#loginModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid aliceblue;
+    z-index: 1001;
+    overflow: auto;
+}
+
+#loginModal h2 {
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#loginForm input,
+#loginForm button {
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 70%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#loginForm button {
+    width: 40%;
+}
+
+.additional-options {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.additional-options a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+#closeModal {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 24px;
+    color: #aaa;
+    text-decoration: none;
+}
+
+#closeModal:hover {
+    color: #555;
+}
