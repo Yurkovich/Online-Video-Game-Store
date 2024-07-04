@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Yurkovich Store</title>
         <link rel="stylesheet" href="static/styles/navbar.css" />
-        <link rel="stylesheet" href="static/styles/auth-window.css" />
         <link rel="stylesheet" href="static/styles/style-main-container.css" />
         <link rel="stylesheet" href="static/styles/style-card.css" />
+        <link rel="stylesheet" href="static/styles/auth-window.css" />
         <link
             rel="stylesheet"
             href="static/styles/new-items-pre-orders-profitable.css"
@@ -145,6 +145,9 @@
                             <p class="popular-card-discount">33%</p>
                         </div>
                     </div>
+                    {% for product_html in product_html_list %}
+                        {{ product_html | safe }} 
+                    {% endfor %}
                 </div>
                 <div class="new-items-pre-orders-profitable">
                     <div class="npp-nav-bar">

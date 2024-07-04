@@ -1,7 +1,7 @@
 import os
 import sqlite3
 
-class DatabaseManager:
+class UserManager:
     def __init__(self, db_name='database.db', folder_path=None):
         if folder_path is None:
             current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -64,5 +64,5 @@ class DatabaseManager:
         conn.commit()
         conn.close()
 
-db_manager = DatabaseManager()
+db_manager = UserManager()
 db_manager.delete_user('Yurkov200000@gmail.com')
