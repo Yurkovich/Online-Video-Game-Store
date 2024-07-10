@@ -47,6 +47,13 @@ class Product:
         conn.commit()
         conn.close()
 
+    def delete_product(self, product_id):
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        cursor.execute('DELETE FROM products WHERE id = ?', (product_id,))
+        conn.commit()
+        conn.close()
+
     @staticmethod
     def get_all_products(db_path):
         conn = sqlite3.connect(db_path)
@@ -114,4 +121,9 @@ class Product:
     def __repr__(self):
         return f'Product(product_name={self.product_name}, genre={self.genre}, price={self.price}, quantity={self.quantity}, is_displayed={self.is_displayed})'
 
+pr_manager = Product()
 
+# pr_manager.add_product('Grand Theft Auto V', 'static\images\gta5-card.jpg', 'Action-Adventure', 1299, 13, 100, 1)
+# pr_manager.delete_product(7)
+# 'For Honor', 'app\static\images\gta5-card.jpg', 'Action', 2499, 20, 100, 1
+# pr_manager.add_product('Red Dead Redemption 2', r'static\images\rdr2-card.jpg', 'Action-adventure', 1359, 75, 100, 1)

@@ -17,7 +17,7 @@ templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app.include_router(router)
-app.include_router(product_router, prefix="/api")
+app.include_router(product_router)
 
 @app.get("/", response_class=HTMLResponse)
 async def read_index(request: Request):
@@ -28,7 +28,7 @@ if __name__ == '__main__':
     product_manager = Product()
     db_manager._create_db()
     product_manager._create_db()
-    product_manager.add_product('For Honor', 'app\static\images\gta5-card.jpg', 'Action', 2499, 20, 100, 1)
+    # product_manager.add_product('Real Man', 'static\images\dota2-card.jpg', 'MOBA', 399, 89, 100, 1)
     uvicorn.run('main:app', port=8000, reload=True)
 
 # product_name, image_url, genre, price, discount, quantity, is_displayed

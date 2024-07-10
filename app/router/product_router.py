@@ -10,7 +10,7 @@ product_router = APIRouter()
 templates = Jinja2Templates(directory="templates")
 
 
-@product_router.get("/products/", response_model=List[ProductModel])
+@product_router.get("/", response_model=List[ProductModel])
 async def show_products(request: Request):
     product_manager = Product()
     products = product_manager.fetch_all_products()

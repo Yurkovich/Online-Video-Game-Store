@@ -1,7 +1,7 @@
 def generate_product_html(product):
     html = '''
                     <div class="game-item">
-                        <div>
+                        <div class="card-img-container">
                             <img class="card-img" src="{}" alt=""/>
                         </div>
                         <div class="card-game-title">
@@ -9,7 +9,7 @@ def generate_product_html(product):
                             <h4>{}</h4>
                         </div>
                         <div class="card-price-discount">
-                            <p class="popular-card-price">{:.2f} ₽</p>
+                            <p class="popular-card-price">{} ₽</p>
                             <p class="popular-card-discount">{}%</p>
                         </div>
                     </div>
