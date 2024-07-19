@@ -4,9 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Yurkovich Store</title>
+
         <link rel="stylesheet" href="static/styles/navbar.css" />
         <link rel="stylesheet" href="static/styles/style-main-container.css" />
-        <link rel="stylesheet" href="static/styles/style-card.css" />
+
         <link rel="stylesheet" href="static/styles/auth-window.css" />
         <link
             rel="stylesheet"
@@ -16,9 +17,21 @@
             href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="static/styles/style-card.css" />
+        <link rel="stylesheet" href="static/styles/cart.css" />
         <style>
             body {
                 font-family: "Ubuntu", sans-serif;
+            }
+
+            .game-item:hover {
+                border-color: #fbbb43;
+            }
+
+            .btn-span {
+                padding: 10px 15px;
+                border: 2px solid #faab17;
+                border-radius: 15px;
             }
         </style>
     </head>
@@ -51,7 +64,7 @@
                 </div>
 
                 <div class="nav-item">
-                    <a href="*">
+                    <a id="cart-link" href="#">
                         <img src="static/files/cart-icon-16.png" alt="" />
                     </a>
                 </div>
@@ -77,9 +90,8 @@
             <div class="main-container">
                 <div class="game-list-popular">
                     <h2>Популярное</h2>
-                    {% for product_html in product_html_list %}
-                        {{ product_html | safe }} 
-                    {% endfor %}
+                    {% for product_html in product_html_list %} {{ product_html
+                    | safe }} {% endfor %}
                 </div>
                 <div class="new-items-pre-orders-profitable">
                     <div class="npp-nav-bar">
@@ -93,9 +105,9 @@
                                 src="https://via.placeholder.com/200"
                                 alt="DOTA 2"
                             />
-                            <div class="npp-card-title">DOTA 2</div>
+                            <div class="npp-card-title">GTA III</div>
                             <div class="npp-card-price">329 ₽</div>
-                            <div class="npp-card-discount">3000 ₽</div>
+                            <div class="npp-card-discount">13%</div>
                         </div>
                         <div class="npp-navbar-card">
                             <img
@@ -104,7 +116,7 @@
                             />
                             <div class="npp-card-title">GTA V</div>
                             <div class="npp-card-price">999 ₽</div>
-                            <div class="npp-card-discount">1500 ₽</div>
+                            <div class="npp-card-discount">13%</div>
                         </div>
                         <div class="npp-navbar-card">
                             <img
@@ -113,7 +125,7 @@
                             />
                             <div class="npp-card-title">Counter-Strike 2</div>
                             <div class="npp-card-price">789 ₽</div>
-                            <div class="npp-card-discount">1000 ₽</div>
+                            <div class="npp-card-discount">13%</div>
                         </div>
                         <div class="npp-navbar-card">
                             <img
@@ -122,7 +134,7 @@
                             />
                             <div class="npp-card-title">Counter-Strike 2</div>
                             <div class="npp-card-price">789 ₽</div>
-                            <div class="npp-card-discount">1000 ₽</div>
+                            <div class="npp-card-discount">13%</div>
                         </div>
                         <div class="npp-navbar-card">
                             <img
@@ -131,13 +143,14 @@
                             />
                             <div class="npp-card-title">Counter-Strike 2</div>
                             <div class="npp-card-price">789 ₽</div>
-                            <div class="npp-card-discount">1000 ₽</div>
+                            <div class="npp-card-discount">13%</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <footer></footer>
+        <script src="/static/scripts/cart-modal.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const loginButton = document.getElementById("loginButton");

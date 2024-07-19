@@ -65,4 +65,3 @@ class UserManager:
         conn.close()
 
 db_manager = UserManager()
-db_manager.delete_user('Yurkov200000@gmail.com')

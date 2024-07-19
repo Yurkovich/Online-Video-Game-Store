@@ -2,9 +2,9 @@ from fastapi import APIRouter, HTTPException
 from schemas.auth_schema import UserRegistration
 import sqlite3
 
-router = APIRouter()
+auth_router = APIRouter(tags=["Users"])
 
-@router.post("/api/register")
+@auth_router.post("/api/register")
 async def register_user(user_data: UserRegistration):
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()

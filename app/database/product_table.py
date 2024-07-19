@@ -1,5 +1,8 @@
 import os
 import sqlite3
+from typing import Optional
+
+from model.product import ProductModel
 
 class Product:
     def __init__(self, db_name='database.db', folder_path=None):
@@ -9,6 +12,7 @@ class Product:
         
         self.db_path = os.path.join(folder_path, db_name)
         self.folder_path = folder_path
+
         self._create_db()
 
     def _create_db(self):
@@ -55,23 +59,25 @@ class Product:
         conn.close()
 
     @staticmethod
-    def get_all_products(db_path):
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-        cursor.execute('SELECT * FROM products')
-        products = cursor.fetchall()
-        conn.close()
-        return products
-
-    @staticmethod
-    def get_product_by_id(product_id, db_path):
+    def get_product_by_id(product_id: int, db_path: str) -> Optional[ProductModel]:
         conn = sqlite3.connect(db_path)
         cursor = conn.cursor()
         cursor.execute('SELECT * FROM products WHERE id = ?', (product_id,))
         product = cursor.fetchone()
         conn.close()
-        return product
 
+        if product:
+            return ProductModel(
+                id=product[0],
+                product_name=product[1],
+                image_url=product[2],
+                genre=product[3],
+                price=product[4],
+                discount=product[5],
+                quantity=product[6],
+                is_displayed=bool(product[7])
+            )
+        return None
 
     @staticmethod
     def update_product(product_id, product_name=None, image_url=None, genre=None, price=None, discount=None, quantity=None, is_displayed=None, db_path=None):
@@ -82,10 +88,9 @@ class Product:
 
         conn = sqlite3.connect(db_path)
         cursor = conn.cursor()
-        
         update_fields = []
         update_values = []
-        
+
         if product_name is not None:
             update_fields.append('product_name = ?')
             update_values.append(product_name)
@@ -107,7 +112,7 @@ class Product:
         if is_displayed is not None:
             update_fields.append('is_displayed = ?')
             update_values.append(is_displayed)
-        
+
         update_values.append(product_id)
 
         update_query = 'UPDATE products SET ' + ', '.join(update_fields) + ' WHERE id = ?'
@@ -120,10 +125,6 @@ class Product:
 
     def __repr__(self):
         return f'Product(product_name={self.product_name}, genre={self.genre}, price={self.price}, quantity={self.quantity}, is_displayed={self.is_displayed})'
-
+    
 pr_manager = Product()
-
-# pr_manager.add_product('Grand Theft Auto V', 'static\images\gta5-card.jpg', 'Action-Adventure', 1299, 13, 100, 1)
-# pr_manager.delete_product(7)
-# 'For Honor', 'app\static\images\gta5-card.jpg', 'Action', 2499, 20, 100, 1
-# pr_manager.add_product('Red Dead Redemption 2', r'static\images\rdr2-card.jpg', 'Action-adventure', 1359, 75, 100, 1)
+# pr_manager.delete_product(10)

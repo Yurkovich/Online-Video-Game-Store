@@ -13,6 +13,8 @@
     border: solid 2px;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
+    position: relative;
+    overflow: hidden;
 }
 
 .card-game-title {
@@ -26,14 +28,14 @@
 .card-game-title h3 {
     font-weight: 100;
     margin-left: 10px;
-    margin-top: 5px
+    margin-top: 5px;
 }
 
 .card-game-title h4 {
     font-weight: 100;
     color: #fbbb43;
     margin-left: 10px;
-    margin-top: 5px
+    margin-top: 5px;
 }
 
 .card-img-container {
@@ -71,4 +73,42 @@
 .popular-card-price {
     font-size: 25px;
     width: 3.5em;
+}
+
+.game-item {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-btn-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемнение фона */
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.game-item:hover .card-btn-overlay {
+    opacity: 1;
+}
+.card-btn-overlay:hover {
+    color: #fff;
+}
+
+.game-item:hover {
+    border-color: #fbbb43;
+}
+
+.btn-span {
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    border-radius: 15px;
 }

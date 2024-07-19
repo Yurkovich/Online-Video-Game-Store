@@ -44,12 +44,12 @@ input[type="search"] {
 
 .navbar input:focus {
     background-color: white;
-    border: 3px solid #fbbb43;
+    /* border: 3px solid #fbbb43; */
 }
 
 .navbar-button {
     display: flex;
-    border: 3px solid white;
+    border: 3px solid rgb(228, 228, 228);
     border-radius: 2em;
 
     justify-content: center;
@@ -57,17 +57,15 @@ input[type="search"] {
     min-width: 8em;
     max-width: 10em;
     height: 2em;
-
-
     transition: color 0.25s ease;
 }
 
 .nav-item a {
     text-decoration: none;
-    
 }
 
 .navbar-button:hover {
-    border: 3px solid #fbbb43;
-    color: #fbbb43;
+    border: 3px solid #ffffff;
+    background-color: #ffffff;
+    color: #000000;
 }
